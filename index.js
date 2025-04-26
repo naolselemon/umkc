@@ -31,11 +31,15 @@ async function setWebhook() {
 }
 
 // Handle /start command
+// Handle /start command
 bot.onText(/\/start/, (msg) => {
-  console.log('Received /start command from', msg.chat.id);
-  const chatId = msg.chat.id;
-  bot.sendMessage(chatId, 'Hi! Send me a photo and I will embed it into a template.');
-});
+    console.log('Received /start command from', msg.chat.id);
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, 'Welcome to the ወላይታ ሶዶ ዩኒቨርስቲ አከባቢ መሠረተ ክርስቶስ ቤተክርስቲያን - እነሆ ኢየሱስ የዝማሬ ድግስ Bot! We\'re excited to celebrate with you!');
+    setTimeout(() => {
+      bot.sendMessage(chatId, 'Please send a portrait photo or a festival-related image, and I will send you our festival graphic.');
+    }, 1000); // 1-second delay
+  });
 
 // Handle photo messages
 bot.on('photo', async (msg) => {
