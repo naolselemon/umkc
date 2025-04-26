@@ -113,7 +113,7 @@ bot.on('photo', async (msg) => {
     // Send the result back to the user with a filename
     console.log('Sending result photo to user');
     await bot.sendPhoto(chatId, resultBuffer, {
-      caption: 'Here is your photo with the template!',
+      caption: 'Here is your photo with our festival graphics!',
       filename: 'result.png',
     });
     
